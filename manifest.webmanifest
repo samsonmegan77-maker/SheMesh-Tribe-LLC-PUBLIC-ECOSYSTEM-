@@ -1,0 +1,19 @@
+{
+  "name": "SheMesh Tribe LLC — Public Ecosystem",
+  "short_name": "SheMesh Public",
+  "description": "Practical public tools for people, households and communities. Offline-first. No account required.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "orientation": "any",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a1628' width='100' height='100'/><text y='.9em' font-size='70' x='15' fill='%23c49a6c'>◎</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
