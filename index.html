@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SheMesh Tribe LLC Public Ecosystem — Practical public tools for people, households and communities. Offline-first. No account required.">
+  <meta name="theme-color" content="#0a1628">
+  <title>SheMesh Tribe LLC — Public Ecosystem</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◎</text></svg>">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <div class="brand-text">
+          <span class="brand-name">SheMesh Tribe LLC</span>
+          <span class="brand-sub">Public Ecosystem</span>
+        </div>
+      </div>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#home" data-section="home">Home</a></li>
+          <li><a href="#hubs" data-section="hubs">13 Hubs</a></li>
+          <li><a href="#tools" data-section="tools">Tools</a></li>
+          <li><a href="#learning" data-section="learning">Learning</a></li>
+          <li><a href="#community" data-section="community">Community</a></li>
+          <li><a href="#about" data-section="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="section hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">PUBLIC ECOSYSTEM • OFFLINE-FIRST</p>
+        <h1 id="hero-title">The Machine Serves the Tribe<span class="tm">™</span></h1>
+        <p class="lead">Practical public tools for people, households and communities to learn, prepare, work, create and participate.</p>
+        <p class="promise">Learn. Build. Protect. Organise. Participate. Grow.</p>
+        <div class="hero-actions">
+          <a href="#tools" class="btn btn-primary">Start with Tools</a>
+          <a href="#hubs" class="btn btn-secondary">Explore 13 Hubs</a>
+        </div>
+        <p class="privacy-line">No account required • No remote database • Saved progress stays on this device</p>
+        <div class="safety-notice" role="note">
+          <strong>Public-safety notice:</strong> This is the public-facing layer of SheMesh Tribe LLC. Confidential, proprietary and internal systems are deliberately excluded. No trade secrets, protected algorithms or private data are published here.
+        </div>
+      </div>
+    </section>
+
+    <section id="hubs" class="section" aria-labelledby="hubs-title">
+      <div class="container">
+        <h2 id="hubs-title">13 Public Hubs</h2>
+        <p class="section-intro">Practical entry points. Each hub links to tools you can use on this device.</p>
+        <div class="hub-grid" id="hubGrid" role="list"></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section section-alt" aria-labelledby="tools-title">
+      <div class="container">
+        <h2 id="tools-title">Public Tools</h2>
+        <p class="section-intro">All tools run in your browser. Progress and notes stay on this device.</p>
+
+        <article class="tool-card" id="tool-audit" aria-labelledby="audit-title">
+          <h3 id="audit-title">1. Resilience Audit</h3>
+          <p>A simple checklist to see where you stand. Your answers stay on this device.</p>
+          <div class="progress-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="auditProgressBar">
+              <span class="progress-fill" id="auditProgressFill"></span>
+            </div>
+            <span class="progress-label" id="auditProgressLabel">0% complete</span>
+          </div>
+          <ul class="checklist" id="auditList" role="list"></ul>
+          <div class="tool-actions">
+            <button type="button" class="btn btn-secondary" id="auditReset">Reset checklist</button>
+          </div>
+        </article>
+
+        <article class="tool-card" id="tool-butler" aria-labelledby="butler-title">
+          <h3 id="butler-title">2. Offline AI Butler</h3>
+          <p>Local template helper. No network AI. No API keys. Choose a mode and fill in the steps.</p>
+          <div class="butler-modes" role="tablist" aria-label="Butler modes">
+            <button type="button" class="mode-btn active" data-mode="plan" role="tab" aria-selected="true">PLAN</button>
+            <button type="button" class="mode-btn" data-mode="checklist" role="tab" aria-selected="false">CHECKLIST</button>
+            <button type="button" class="mode-btn" data-mode="simple" role="tab" aria-selected="false">MAKE IT SIMPLE</button>
+            <button type="button" class="mode-btn" data-mode="study" role="tab" aria-selected="false">STUDY</button>
+            <button type="button" class="mode-btn" data-mode="job" role="tab" aria-selected="false">JOB</button>
+          </div>
+          <div id="butlerPanel" class="butler-panel" role="tabpanel"></div>
+          <div class="tool-actions">
+            <button type="button" class="btn btn-primary" id="butlerGenerate">Show template</button>
+            <button type="button" class="btn btn-secondary" id="butlerClear">Clear</button>
+          </div>
+          <div id="butlerOutput" class="butler-output" aria-live="polite"></div>
+        </article>
+
+        <article class="tool-card" id="tool-locker" aria-labelledby="locker-title">
+          <h3 id="locker-title">3. Evidence Locker</h3>
+          <p>Local-only notes with title, date and note. Not a legal evidence system.</p>
+          <div class="warning-box" role="alert">
+            <strong>Warning:</strong> Never store passwords, PINs, card numbers, API keys, recovery codes, private keys or authentication secrets.
+          </div>
+          <form id="lockerForm" class="locker-form">
+            <div class="form-row">
+              <label for="lockerTitle">Title</label>
+              <input type="text" id="lockerTitle" name="title" required maxlength="120" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <label for="lockerDate">Date</label>
+              <input type="date" id="lockerDate" name="date" required>
+            </div>
+            <div class="form-row">
+              <label for="lockerNote">Note</label>
+              <textarea id="lockerNote" name="note" rows="3" maxlength="2000" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add record</button>
+          </form>
+          <div class="tool-actions">
+            <button type="button" class="btn btn-secondary" id="lockerExport">Export JSON</button>
+            <button type="button" class="btn btn-danger" id="lockerClearAll">Delete all local data</button>
+          </div>
+          <ul class="record-list" id="lockerList" role="list"></ul>
+        </article>
+
+        <article class="tool-card" id="tool-safety" aria-labelledby="safety-title">
+          <h3 id="safety-title">4. Safety Centre</h3>
+          <p>General digital and practical safety reminders. Not a substitute for professional advice.</p>
+          <ul class="safety-list">
+            <li>Verify unexpected requests before acting on them.</li>
+            <li>Protect important documents (keep copies in a safe place).</li>
+            <li>Use strong, unique passwords for important accounts.</li>
+            <li>Enable multi-factor authentication (MFA) where available.</li>
+            <li>Be cautious with links and attachments from unknown sources.</li>
+            <li>Use appropriate emergency or professional services when needed.</li>
+          </ul>
+          <p class="disclaimer">This is general information only. It is not legal, medical, financial or emergency advice.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="learning" class="section" aria-labelledby="learning-title">
+      <div class="container">
+        <h2 id="learning-title">Learning Path</h2>
+        <p class="section-intro">A simple 8-step loop. Track progress on this device.</p>
+        <div class="learning-path" id="learningPath"></div>
+        <div class="tool-actions">
+          <button type="button" class="btn btn-secondary" id="learningReset">Reset progress</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="section section-alt" aria-labelledby="community-title">
+      <div class="container">
+        <h2 id="community-title">Community Exchange</h2>
+        <p class="section-intro">Local-only board for needs, skills, resources and ideas. Data stays on this device. Not a public social network.</p>
+        <form id="communityForm" class="community-form">
+          <div class="form-row">
+            <label for="communityType">Type</label>
+            <select id="communityType" name="type" required>
+              <option value="Need">Need</option>
+              <option value="Skill">Skill</option>
+              <option value="Resource">Resource</option>
+              <option value="Idea">Idea</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="communityDesc">Short description</label>
+            <input type="text" id="communityDesc" name="description" required maxlength="200" autocomplete="off" placeholder="e.g. Looking for basic gardening advice">
+          </div>
+          <button type="submit" class="btn btn-primary">Add entry</button>
+        </form>
+        <div class="tool-actions">
+          <button type="button" class="btn btn-danger" id="communityClear">Clear all entries</button>
+        </div>
+        <ul class="record-list" id="communityList" role="list"></ul>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About</h2>
+        <p><strong>SheMesh Tribe LLC — Public Ecosystem</strong></p>
+        <p>Tagline: <em>The Machine Serves the Tribe™</em></p>
+        <p>Positioning: Preserving knowledge. Connecting generations.</p>
+        <p>Promise: Learn. Build. Protect. Organise. Participate. Grow.</p>
+        <p>This is the public front door. It is designed for ordinary people. No account. No remote database for core features. Progress and notes stay in your browser’s local storage.</p>
+        <h3>Privacy model</h3>
+        <ul>
+          <li>No account required</li>
+          <li>No remote database for core functionality</li>
+          <li>Local browser storage only</li>
+          <li>Export and delete capabilities for your data</li>
+          <li>No analytics or advertising trackers</li>
+        </ul>
+        <h3>Public-safe boundary</h3>
+        <p>Proprietary algorithms, trade secrets, confidential methodologies and internal systems are not published here. If something is uncertain, it is left out.</p>
+        <p class="disclaimer">This application provides general practical tools and information. It is not professional legal, medical, financial or emergency advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>SheMesh Tribe LLC — Public Ecosystem</p>
+      <p class="footer-tag">The Machine Serves the Tribe™</p>
+      <p class="footer-meta">Offline-first • Local-first • Public-safe</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
