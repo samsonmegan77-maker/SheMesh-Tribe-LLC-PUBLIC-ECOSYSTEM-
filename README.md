@@ -75,6 +75,20 @@ Everything runs in the browser. **No account. No remote database for core featur
 - `sw.js` service worker caches core files  
 - Core functionality works without a network after first load  
 
+Enable **GitHub Pages** (Settings → Pages → Source: **GitHub Actions**) to publish the site from this repository.
+
+---
+
+## Documentation
+
+| Doc | Description |
+|-----|-------------|
+| [User guide](docs/USER-GUIDE.md) | How to use every tool |
+| [Public-safety boundary](docs/PUBLIC-SAFETY-BOUNDARY.md) | What is public vs intentionally protected |
+| [Commercial overview](docs/COMMERCIAL-OVERVIEW.md) | Free tools vs paid/pilot lanes (no secrets) |
+| [Community pilots](docs/COMMUNITY-PILOTS.md) | How pilots work; Bambanani Community Care |
+| [Project log](docs/PROJECT-LOG.md) | Public summary of build decisions |
+
 ---
 
 ## Public-safe boundary
@@ -89,6 +103,7 @@ This repository deliberately **excludes**:
 - Private customer data  
 - Credentials, keys, secrets  
 - Confidential partner or infrastructure information  
+- Live pilot-code lists  
 
 See [docs/PUBLIC-SAFETY-BOUNDARY.md](docs/PUBLIC-SAFETY-BOUNDARY.md).
 
@@ -99,11 +114,9 @@ See [docs/PUBLIC-SAFETY-BOUNDARY.md](docs/PUBLIC-SAFETY-BOUNDARY.md).
 ## How to use
 
 1. Open `index.html` in a modern browser, or serve the folder with any static file server.  
-2. Or visit the GitHub Pages / deployed URL once published.  
+2. Or visit the GitHub Pages URL once Pages is enabled.  
 3. All tools work immediately. No login.  
 4. Progress is saved on the device you are using.  
-
-For a detailed walkthrough see [docs/USER-GUIDE.md](docs/USER-GUIDE.md).
 
 ---
 
@@ -111,7 +124,7 @@ For a detailed walkthrough see [docs/USER-GUIDE.md](docs/USER-GUIDE.md).
 
 Contributors must never commit secrets, credentials, private data or proprietary material.
 
-See [SECURITY.md](SECURITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+See [SECURITY.md](SECURITY.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [LICENSE](LICENSE).
 
 ---
 
