@@ -1,0 +1,33 @@
+Copyright (c) SheMesh Tribe LLC. All rights reserved.
+
+SheMesh Tribe LLC — Public Ecosystem
+
+This repository contains the public-facing interface of SheMesh Tribe LLC.
+
+You may:
+- View, clone, and run the public application for personal, community, educational,
+  and evaluation use
+- Share links to this public repository
+- Propose improvements via pull requests subject to CONTRIBUTING.md
+
+You may not, without prior written permission from SheMesh Tribe LLC:
+- Sell this software as a standalone product under another brand
+- Remove copyright or public-safety notices
+- Claim ownership of SheMesh Tribe LLC trademarks or brand assets
+- Use this repository to reconstruct or disclose proprietary SheMesh systems,
+  trade secrets, or confidential materials that are intentionally excluded here
+
+Proprietary algorithms, private systems, commercial customer data, and internal
+infrastructure are not licensed under this file and are not published in this
+repository.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+This public application provides general practical tools and information. It is
+not professional legal, medical, financial, or emergency advice.
